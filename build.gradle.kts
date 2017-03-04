@@ -65,23 +65,26 @@ dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlinVersion")
     compile("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
 
-    compile("org.springframework.boot:spring-boot-starter-webflux") {
-        exclude(module = "hibernate-validator")
-    }
-    compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
-    compile("org.springframework.boot:spring-boot-devtools")
-    testCompile("org.springframework.boot:spring-boot-starter-test")
+    compile("org.springframework:spring-webflux")
+
+    compile("org.springframework.data:spring-data-mongodb")
+    compile("org.mongodb:mongodb-driver-reactivestreams")
 
     compile("com.samskivert:jmustache:1.13")
     compile("com.atlassian.commonmark:commonmark:0.8.0")
     compile("com.atlassian.commonmark:commonmark-ext-autolink:0.8.0")
 
+    compile("org.slf4j:slf4j-api")
+    compile("ch.qos.logback:logback-classic")
 
     compile("io.projectreactor:reactor-kotlin:1.0.0.BUILD-SNAPSHOT")
+    compile("io.projectreactor.ipc:reactor-netty")
     testCompile("io.projectreactor.addons:reactor-test")
 
     compile("com.fasterxml.jackson.module:jackson-module-kotlin")
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
+
+    testCompile("junit:junit")
 }
 
 task<GulpTask>("gulpBuild") {

@@ -1,25 +1,27 @@
 package mixit.integration
 
+import mixit.Application
+import org.junit.After
 import org.junit.Before
-import org.junit.runner.RunWith
-import org.springframework.boot.context.embedded.LocalServerPort
-import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment
-import org.springframework.test.context.junit4.SpringRunner
+import org.springframework.util.SocketUtils.*
 import org.springframework.web.reactive.function.client.WebClient
 
-@RunWith(SpringRunner::class)
-@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+
 abstract class AbstractIntegrationTests {
 
-    @LocalServerPort
-    var port: Int? = null
-
+    lateinit var application: Application
     lateinit var client: WebClient
 
     @Before
     fun setup() {
-        client = WebClient.create("http://localhost:$port")
+        application = Application(findAvailableTcpPort())
+        application.start()
+        client = WebClient.create("http://localhost:${application.port}")
+    }
+
+    @After
+    fun tearDown() {
+        application.stop()
     }
 
 }
