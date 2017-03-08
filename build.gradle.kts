@@ -29,7 +29,6 @@ buildscript {
 apply {
     plugin("kotlin")
     plugin("kotlin-noarg")
-    plugin("kotlin-spring")
     plugin("com.moowork.node")
     plugin("com.moowork.gulp")
     plugin("org.springframework.boot")
