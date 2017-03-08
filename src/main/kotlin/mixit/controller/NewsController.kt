@@ -11,7 +11,6 @@ import java.time.Duration.ofMillis
 
 class NewsController : RouterFunctionProvider() {
 
-    // TODO Remove this@NewsController when KT-15667 will be fixed
     override val routes: Routes = {
         "/news".route {
             (accept(TEXT_HTML) and GET("/")) { newsView(it) }

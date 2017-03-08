@@ -31,7 +31,6 @@ class BlogController(val repository: PostRepository,
             .appendLiteral(" ")
             .appendPattern("yyyy").toFormatter(Locale.ENGLISH)
 
-    // TODO Remove this@ArticleController when KT-15667 will be fixed
     override val routes: Routes = {
         accept(TEXT_HTML).route {
             "/blog".route {
