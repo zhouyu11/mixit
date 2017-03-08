@@ -1,4 +1,4 @@
-package mixit.support
+package mixit.util
 
 import org.springframework.beans.factory.InitializingBean
 import org.springframework.context.ApplicationContext

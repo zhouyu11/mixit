@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.query.Query
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
-import mixit.support.*
+import mixit.util.*
 
 class UserRepository(val template: ReactiveMongoTemplate) {
 

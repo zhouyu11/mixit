@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import reactor.core.publisher.Flux
-import mixit.support.*
+import mixit.util.*
 import org.springframework.data.mongodb.core.query.Criteria.*
 import reactor.core.publisher.Mono
 

@@ -7,7 +7,7 @@ import mixit.repository.PostRepository
 import mixit.repository.EventRepository
 import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
-import mixit.support.*
+import mixit.util.*
 import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.ReloadableResourceBundleMessageSource
 import org.springframework.context.support.registerBean
