@@ -9,7 +9,6 @@ import mixit.support.*
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.server.*
-import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.ServerResponse.*
 import java.time.format.DateTimeFormatter
 import java.util.*
@@ -19,7 +18,6 @@ import java.time.temporal.ChronoField
 import java.time.format.DateTimeFormatterBuilder
 
 
-@Controller
 class BlogController(val repository: PostRepository,
                      val markdownConverter: MarkdownConverter,
                      @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {

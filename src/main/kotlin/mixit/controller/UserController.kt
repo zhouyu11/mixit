@@ -5,7 +5,6 @@ import mixit.repository.EventRepository
 import mixit.repository.UserRepository
 import mixit.support.*
 import org.springframework.http.MediaType.*
-import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
 import toMono
@@ -14,7 +13,6 @@ import java.net.URLDecoder
 import java.time.LocalDate
 
 
-@Controller
 class UserController(val repository: UserRepository,
                      val eventRepository: EventRepository,
                      val markdownConverter: MarkdownConverter) : RouterFunctionProvider() {

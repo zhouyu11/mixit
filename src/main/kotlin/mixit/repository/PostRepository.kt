@@ -11,14 +11,12 @@ import org.springframework.data.domain.Sort.Order
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
-import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import mixit.support.*
 import org.springframework.data.mongodb.core.query.Criteria.*
 import reactor.core.publisher.Mono
 
 
-@Repository
 class PostRepository(val template: ReactiveMongoTemplate) {
 
     fun initData() {

@@ -9,12 +9,10 @@ import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
-import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import mixit.support.*
 
-@Repository
 class UserRepository(val template: ReactiveMongoTemplate) {
 
     fun initData() {

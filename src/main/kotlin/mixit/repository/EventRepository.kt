@@ -9,11 +9,9 @@ import org.springframework.data.domain.Sort
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
-import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 
-@Repository
-class EventRepository(val template: ReactiveMongoTemplate, val userRepository: UserRepository) {
+class EventRepository(val template: ReactiveMongoTemplate) {
 
 
     fun initData() {

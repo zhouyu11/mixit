@@ -10,13 +10,11 @@ import mixit.support.RouterFunctionProvider
 import mixit.support.language
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.TEXT_HTML
-import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.Routes
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import java.util.*
 
-@Controller
 class GlobalController(val userRepository: UserRepository,
                        val eventRepository: EventRepository,
                        val markdownConverter: MarkdownConverter) : RouterFunctionProvider() {

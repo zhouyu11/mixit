@@ -7,13 +7,11 @@ import mixit.support.RouterFunctionProvider
 import mixit.support.MarkdownConverter
 import mixit.support.json
 import org.springframework.http.MediaType.*
-import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
 import java.time.LocalDateTime
 
 
-@Controller
 class TalkController(val repository: TalkRepository,
                      val eventRepository: EventRepository,
                      val markdownConverter: MarkdownConverter): RouterFunctionProvider() {
